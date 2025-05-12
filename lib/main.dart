@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:support/screen/inicio_screen.dart';
 import 'package:support/screen/login_screen.dart';
+import 'package:support/screen/principal_screen.dart';
 
 void main() {
   runApp(const Support());
@@ -15,6 +16,7 @@ class Support extends StatelessWidget {
       routes: {
         "/inicio": (c) => const InicioScreen(),
         "/login": (c) => const LoginScreen(),
+        "/principal": (c) => const PrincipalScreen(),
       },
       initialRoute: "/inicio",
       title: "Support",

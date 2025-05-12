@@ -163,7 +163,11 @@ class _LoginScreenState extends State<LoginScreen> {
                       content: const Text("Iniciaste sesión correctamente."),
                       actions: [
                         TextButton(
-                          onPressed: () => Navigator.pop(context),
+                          onPressed:
+                              () => Navigator.pushReplacementNamed(
+                                context,
+                                "/principal",
+                              ),
                           child: const Text("OK"),
                         ),
                       ],
