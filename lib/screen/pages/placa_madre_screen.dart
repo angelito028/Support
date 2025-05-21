@@ -6,12 +6,44 @@ class PlacaMadreScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: true,
-        title: const Text("Support"),
-      ),
+      appBar: AppBar(),
+      resizeToAvoidBottomInset: true,
 
-      body: Center(child: const Text("PLACA MADRE SCREEN")),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Text(
+              "Placa Madre",
+              style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
+              textAlign: TextAlign.center,
+            ),
+
+            const SizedBox(height: 20.0),
+
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 30.0,
+                vertical: 20.0,
+              ),
+              child: SizedBox(
+                width: double.maxFinite - 50.0,
+                child: Image.asset("assets/placa_madre.png"),
+              ),
+            ),
+
+            const SizedBox(height: 20.0),
+
+            Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage("assets/fondo_login.jpeg"),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
